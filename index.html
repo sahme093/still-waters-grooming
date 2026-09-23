@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--
+      Title + description are hardcoded here (not pulled from src/config.js)
+      because index.html is read by browsers/crawlers before React ever runs.
+      If you reuse this site for a different salon, update these two tags
+      AND src/config.js so they stay in sync.
+    -->
+    <title>Your Salon Name | Dog & Cat Grooming in Your City, ST</title>
+    <meta
+      name="description"
+      content="Your Salon Name is a dog and cat grooming salon in Your City, ST. Book baths, haircuts, nail trims and full-service spa days for your pet."
+    />
+
+    <link rel="icon" type="image/webp" href="/assets/logo.webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Jost:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
