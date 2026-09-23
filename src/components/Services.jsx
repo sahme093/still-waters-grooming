@@ -29,7 +29,6 @@ export default function Services() {
 
         <div className="service-groups">
           <ServiceList title="Dogs" items={salon.services.dog} />
-          <ServiceList title="Cats" items={salon.services.cat} />
         </div>
       </div>
     </section>

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { salon } from "../config.js";
+import BrandMark from "./BrandMark.jsx";
 
 const LINKS = [
   { href: "#services", label: "Services" },
@@ -15,7 +16,7 @@ export default function Header() {
     <header className="site-header">
       <div className="container site-header__bar">
         <a href="#top" className="brand">
-          <span className="brand__mark" aria-hidden="true" />
+          <BrandMark className="brand__mark" />
           <span className="brand__name">{salon.name}</span>
         </a>
 

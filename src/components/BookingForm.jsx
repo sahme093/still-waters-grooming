@@ -33,7 +33,6 @@ function dayName(dateStr) {
 }
 
 export default function BookingForm() {
-  const [species, setSpecies] = useState("dog");
   const [selected, setSelected] = useState({});
   const [sizeIndex, setSizeIndex] = useState(null);
   const [firstVisit, setFirstVisit] = useState(null);
@@ -53,12 +52,10 @@ export default function BookingForm() {
     setErrors((e) => ({ ...e, services: undefined }));
   };
 
-  const chosenServices = salon.services[species].filter(
-    (s) => selected[`${species}:${s.name}`]
-  );
+  const chosenServices = salon.services.dog.filter((s) => selected[s.name]);
 
   function buildMessage() {
-    const size = sizeIndex != null ? salon.sizes[species][sizeIndex] : null;
+    const size = sizeIndex != null ? salon.sizes.dog[sizeIndex] : null;
     const dateLabel = fields.date
       ? new Date(`${fields.date}T12:00:00`).toLocaleDateString("en-US", {
           weekday: "short",
@@ -72,7 +69,7 @@ export default function BookingForm() {
       `Owner: ${fields.owner}`,
       `Phone: ${fields.phone}`,
       fields.email && `Email: ${fields.email}`,
-      `Pet: ${fields.pet} (${species === "dog" ? "Dog" : "Cat"}${fields.breed ? ", " + fields.breed : ""})`,
+      `Pet: ${fields.pet} (Dog${fields.breed ? ", " + fields.breed : ""})`,
       size && `Size: ${size[0]} (${size[1]})`,
       firstVisit != null && `First visit: ${firstVisit ? "Yes" : "No"}`,
       `Services: ${chosenServices.map((s) => s.name).join(", ")}`,
@@ -206,34 +203,6 @@ export default function BookingForm() {
     <form className="booking-form" onSubmit={handleSubmit} noValidate>
       <div className="field-grid">
         <div className="toggle-group">
-          <span className="toggle-group__label">Your pet is a</span>
-          <div className="toggle-group__row">
-            <button
-              type="button"
-              className="toggle-btn"
-              aria-pressed={species === "dog"}
-              onClick={() => {
-                setSpecies("dog");
-                setSizeIndex(null);
-              }}
-            >
-              Dog
-            </button>
-            <button
-              type="button"
-              className="toggle-btn"
-              aria-pressed={species === "cat"}
-              onClick={() => {
-                setSpecies("cat");
-                setSizeIndex(null);
-              }}
-            >
-              Cat
-            </button>
-          </div>
-        </div>
-
-        <div className="toggle-group">
           <span className="toggle-group__label">First visit with us?</span>
           <div className="toggle-group__row">
             <button
@@ -278,7 +247,7 @@ export default function BookingForm() {
             id="breed"
             value={fields.breed}
             onChange={(e) => setField("breed", e.target.value)}
-            placeholder={species === "dog" ? "Goldendoodle" : "Persian"}
+            placeholder="Goldendoodle"
           />
         </label>
       </div>
@@ -286,7 +255,7 @@ export default function BookingForm() {
       <div className="toggle-group">
         <span className="toggle-group__label">Size / weight</span>
         <div className="size-grid">
-          {salon.sizes[species].map(([label, sub], i) => (
+          {salon.sizes.dog.map(([label, sub], i) => (
             <button
               key={label}
               type="button"
@@ -306,8 +275,8 @@ export default function BookingForm() {
           Services *
         </span>
         <div className="chip-group" role="group" aria-labelledby="services-label">
-          {salon.services[species].map((s) => {
-            const key = `${species}:${s.name}`;
+          {salon.services.dog.map((s) => {
+            const key = s.name;
             return (
               <button
                 key={key}

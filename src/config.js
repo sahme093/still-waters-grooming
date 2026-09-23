@@ -8,48 +8,46 @@
 // ============================================================================
 
 export const salon = {
-  name: "Your Salon Name",
-  shortName: "Your Salon",
+  name: "Still Waters Grooming Salon",
+  shortName: "Still Waters",
 
   // Used in the hero heading as: "Pet grooming {highlight} {city}"
-  heroKicker: "Pet grooming",
+  heroKicker: "Luxury Dog Spa",
   heroHighlight: "in",
-  heroCity: "Your City",
-
-  tagline: "Dogs & cats · Your City, ST",
+  heroCity: "Menifee",
 
   description:
-    "Add a short introduction here — what makes your grooming salon different, which pets you welcome, and why new clients should book with you.",
+    "Still Waters Grooming is a Luxury dog spa in Menifee offering private 1:1 appointments with a professional Pet Stylist who has more than 20 years experience. If you are ready to upgrade your dogs grooming experience to a calm, quiet, peaceful environment with a groomer who truly loves her job. Book an appontment today.",
 
   // E.164 format — used for tel: / sms: links. +1 555 555 0100 is a reserved
   // fictional number block, safe to leave in place until you add a real one.
-  phone: "+15555550100",
-  phoneDisplay: "(555) 555-0100",
+  phone: "+19512305608",
+  phoneDisplay: "(951) 230-5608",
 
   email: "", // leave blank to hide the "send by email" fallback link
 
   address: {
-    line1: "123 Main Street",
-    city: "Your City",
-    state: "ST",
-    zip: "00000",
+    line1: "Lazy Creek Rd",
+    city: "Menifee",
+    state: "CA",
+    zip: "92586",
   },
 
   // Google Maps embed + link query. Kept separate from the address object
   // so you can hand-tune the query string without reformatting the address.
-  mapsQuery: "123 Main Street, Your City, ST 00000",
+  mapsQuery: "Lazy Creek Rd, Menifee, CA 92586",
 
   // 0 = Sunday ... 6 = Saturday, matching Date#getDay().
   hours: [
     { day: "Sunday", open: null, close: null },
-    { day: "Monday", open: "9:00 am", close: "5:00 pm" },
+    { day: "Monday", open: null, close: null },
     { day: "Tuesday", open: "9:00 am", close: "5:00 pm" },
     { day: "Wednesday", open: "9:00 am", close: "5:00 pm" },
     { day: "Thursday", open: "9:00 am", close: "5:00 pm" },
     { day: "Friday", open: "9:00 am", close: "5:00 pm" },
-    { day: "Saturday", open: "9:00 am", close: "2:00 pm" },
+    { day: "Saturday", open: "9:00 am", close: "5:00 pm" },
   ],
-  hoursSummary: "Mon–Fri, 9am–5pm · Sat 9am–2pm",
+  hoursSummary: "Tues–Sat, 9am–5pm, closed Sun & Mon",
 
   // Toggle to show/hide "from $X" price labels next to each service.
   // Prices below are placeholder sample values — replace with your own.
@@ -61,15 +59,6 @@ export const salon = {
       { name: "Bathing and blow dry", price: 40 },
       { name: "Nail trimming", price: 15 },
       { name: "Ear cleaning", price: 10 },
-      { name: "Teeth brushing", price: 10 },
-      { name: "Anal gland expression", price: 15 },
-      { name: "Flea and tick treatment", price: 20 },
-    ],
-    cat: [
-      { name: "Cat grooming", price: 65 },
-      { name: "Cat bathing", price: 50 },
-      { name: "Cat nail trimming", price: 15 },
-      { name: "Cat ear cleaning", price: 10 },
     ],
   },
 
@@ -81,63 +70,52 @@ export const salon = {
       ["Large", "50–90 lb"],
       ["XL", "90+ lb"],
     ],
-    cat: [
-      ["Small", "under 8 lb"],
-      ["Medium", "8–12 lb"],
-      ["Large", "12+ lb"],
-    ],
   },
 
-  // Sample gallery — swap these files in /public/assets and update the alt
-  // text to describe each real photo.
   gallery: [
-    { src: "/assets/p5.webp", alt: "Sample gallery photo — replace with your own grooming photos" },
-    { src: "/assets/p1.webp", alt: "Sample gallery photo — replace with your own grooming photos" },
-    { src: "/assets/p3.webp", alt: "Sample gallery photo — replace with your own grooming photos" },
+    {
+      src: "/assets/g-pepper.webp",
+      alt: "Pepper before and after grooming — shaggy schnauzer transformed into a neat, tidy trim",
+    },
+    {
+      src: "/assets/g-moo-teddy.webp",
+      alt: "Moo and Teddy after grooming, looking fluffy and freshly trimmed",
+    },
+    {
+      src: "/assets/g-pomeranian.webp",
+      alt: "Pomeranian before and after grooming — thick coat shaped into a neat rounded trim",
+    },
+    {
+      src: "/assets/g-rosie.webp",
+      alt: "Rosie before and after grooming — matted coat transformed into a clean, tidy cut",
+    },
   ],
 
-  // Sample reviews — fictional names and quotes. Replace with your own
-  // reviews (e.g. copied from Google) before publishing.
   reviews: [
     {
-      name: "Jordan P.",
-      when: "3 years ago",
-      text: "Wonderful experience from start to finish! The groomer was so patient with my pup and did an amazing job with the cut. Highly recommend!",
+      name: "Cyrise Geiger",
+      when: "8 months ago",
+      text: "Dejah is an amazing groomer. She gives top quality grooms. I highly recommend her. Her facility is very clean and professional. I love that she does one dog at a time. She truly cares for the animals she grooms.",
     },
     {
-      name: "Sam R.",
-      when: "a year ago",
-      text: "Such a great job on both of our pets! Very patient with them and takes the time to get every detail right. They also send lots of update photos during the appointment, which we love.",
+      name: "Krissy",
+      when: "8 months ago",
+      text: "Dejah is the best!!! I have been taking my dog to her for 2 years and she has always greeted us with love. Dejah is knowledgeable and truly cares about my dog and gives her the best care possible. She is passionate about being groomer and it really shows in her work. My dog always looks amazing and leaves happy and beautiful each time. I'm so thankful for Dejah and I know that my dog is in the best hands! 10000% recommend her services! She's the greatest ❤️. Thank you, Dejah! You are so talented!",
     },
     {
-      name: "Taylor M.",
-      when: "a year ago",
-      text: "Great job with our almost one-year-old puppy. Pricing was reasonable and they were very patient with our hyper little guy.",
+      name: "Cortney Bunge",
+      when: "8 months ago",
+      text: "Dejah was so professional and it was amazing with her 1 on 1 appointment with my dog so no other dogs to worry about. My doggie looks amazing thank you",
     },
     {
-      name: "Casey L.",
-      when: "2 years ago",
-      text: "An incredible groomer — my dog was completely comfortable the whole time. Loved getting text updates with cute photos throughout the appointment. Highly recommend!",
+      name: "Katelin Wass",
+      when: "8 months ago",
+      text: "We have been using Dejah for years! She is always so kind to our dog Gracie and always keeps her looking amazing. We are so thankful to have a groomer who has compassion and love towards our dog while also giving great results. I can not recommend her enough!",
     },
     {
-      name: "Morgan T.",
-      when: "3 weeks ago",
-      text: "Did an amazing job on our dog and left him looking great. We'll definitely be returning customers!",
-    },
-    {
-      name: "Alex W.",
-      when: "2 years ago",
-      text: "We love bringing our dogs here — the team is so good with them, even with tricky coats and big personalities. Incredible work every time!",
-    },
-    {
-      name: "Riley M.",
-      when: "a year ago",
-      text: "I've been taking my dog here weekly and I'm so happy with how great they always look. Wouldn't go anywhere else.",
-    },
-    {
-      name: "Amanda P.",
-      when: "2 years ago",
-      text: "Always responds promptly and my pet leaves happier and looking better every time. Highly recommend!",
+      name: "Madelynn Hitt",
+      when: "8 months ago",
+      text: "Dejah is absolutely AMAZING!! She has been the only groomer who has cut our cavalier in the right cut! Claire always comes back from Dejah looking amazing and soooo soft!!",
     },
   ],
 
@@ -147,35 +125,35 @@ export const salon = {
   // brand colors; keep accentStrong/accentDeep/accentLabel dark enough to
   // clear WCAG AA contrast against the light backgrounds they sit on.
   colors: {
-    bg: "#FAF6EF",
+    bg: "#f9effa",
     surface: "#FFFFFF",
-    surfaceAlt: "#F3EDE3",
-    ink: "#1D1B18",
-    inkSoft: "#4F4A43",
-    inkMute: "#6B655C",
-    border: "rgba(29,27,24,.1)",
-    borderStrong: "rgba(29,27,24,.18)",
-    accent: "#EFA73C",
-    accentHover: "#F3B657",
-    // Darkened slightly from the source design's #C98323 / #B06F14 so text
-    // set in these colors clears WCAG AA contrast against the cream/white
-    // backgrounds they sit on (large hero text needs 3:1, the small eyebrow
-    // labels need 4.5:1) — same hue, just a touch deeper.
-    accentStrong: "#B8741A",
-    accentDeep: "#9A5F0E",
-    accentLabel: "#8A5A10",
-    highlight: "#FDF1DC",
-    selection: "#F4D49B",
-    onDark: "#FAF6EF",
+    surfaceAlt: "#F1E6F5",
+    ink: "#231A2C",
+    inkSoft: "#4A3A50",
+    inkMute: "#6E5E74",
+    border: "rgba(35,26,44,.1)",
+    borderStrong: "rgba(35,26,44,.18)",
+    accent: "#84287d",
+    accentHover: "#561d4b",
+    // Darker plum shades so text set in these colors clears WCAG AA contrast
+    // against the lavender/white backgrounds they sit on (large hero text
+    // needs 3:1, the small eyebrow labels need 4.5:1) — same hue family as
+    // accent, just deeper.
+    accentStrong: "#8c438d",
+    accentDeep: "#6d2f66",
+    accentLabel: "#5c2752",
+    highlight: "#F5E6F3",
+    selection: "#E3D0F0",
+    onDark: "#FBF3FA",
     error: "#B3261E",
     openDot: "#3E9B5A",
-    closedDot: "#C9A27A",
+    closedDot: "#B79CC0",
   },
 
   fonts: {
-    display: "'Josefin Sans', sans-serif",
-    body: "'Jost', system-ui, sans-serif",
+    display: "'Cormorant Garamond', serif",
+    body: "'Poppins', system-ui, sans-serif",
     googleFontsHref:
-      "https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Jost:wght@400;500;600&display=swap",
+      "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Poppins:wght@400;500;600&display=swap",
   },
 };

@@ -34,7 +34,6 @@ export default function Hero() {
             />
             {status ? status.label : "Checking hours…"}
           </span>
-          <span className="pill">{salon.tagline}</span>
         </div>
 
         <h1>
@@ -57,29 +56,12 @@ export default function Hero() {
         </p>
       </div>
 
-      <div className="hero__art" aria-hidden="true">
-        <div className="hex" style={{ left: "8%", top: "6%", width: "62%", background: "var(--color-accent)" }} />
-        <div
-          className="hex hex--photo"
-          style={{ left: "17%", top: "14%", width: "52%", backgroundImage: `url(${salon.gallery[0].src})`, backgroundPosition: "center 30%" }}
-        />
-        <svg viewBox="0 0 86.6 100" className="hex-outline">
-          <polygon
-            points="43.3,1.5 85.1,25.5 85.1,74.5 43.3,98.5 1.5,74.5 1.5,25.5"
-            fill="none"
-            stroke="var(--color-accent)"
-            strokeWidth="3"
-            strokeLinejoin="round"
-          />
-        </svg>
-        <div
-          className="hex hex--photo"
-          style={{ right: "4%", top: "44%", width: "40%", backgroundImage: `url(${salon.gallery[1].src})`, backgroundPosition: "center 25%" }}
-        />
-        <div className="hex" style={{ left: 0, bottom: "2%", width: "26%", background: "var(--color-highlight)" }} />
-        <div
-          className="hex hex--photo"
-          style={{ left: "30%", bottom: 0, width: "30%", backgroundImage: `url(${salon.gallery[2].src})`, backgroundPosition: "center 40%" }}
+      <div className="hero__art">
+        <img
+          className="hero__photo"
+          src="/assets/salon-interior.webp"
+          alt="Inside the Still Waters Grooming Salon grooming suite"
+          loading="eager"
         />
       </div>
     </section>
