@@ -17,7 +17,7 @@ export default function Header() {
       <div className="container site-header__bar">
         <a href="#top" className="brand">
           <BrandMark className="brand__mark" />
-          <span className="brand__name">{salon.name}</span>
+          <span className="brand__name">{salon.headerName}</span>
         </a>
 
         <nav className="nav-desktop" aria-label="Primary">

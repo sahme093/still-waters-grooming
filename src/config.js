@@ -10,6 +10,8 @@
 export const salon = {
   name: "Still Waters Grooming Salon",
   shortName: "Still Waters",
+  // Shown next to the logo in the header — kept short so it fits on phones.
+  headerName: "Still Waters Grooming",
 
   // Used in the hero heading as: "Pet grooming {highlight} {city}"
   heroKicker: "Luxury Dog Spa",

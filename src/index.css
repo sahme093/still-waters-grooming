@@ -199,6 +199,12 @@ textarea:focus-visible,
   text-transform: uppercase;
   white-space: nowrap;
 }
+@media (max-width: 400px) {
+  .brand__name {
+    font-size: 15px;
+    letter-spacing: 0.1em;
+  }
+}
 
 .nav-desktop {
   display: none;
